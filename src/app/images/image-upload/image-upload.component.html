@@ -1,0 +1,10 @@
+<p>image-upload works!</p>
+<form (submit)="uploadImage()">
+  <input type="file" (change)="onImageSelected($event)" accept="image/*" />
+  <br />
+  <input type="text" placeholder="Image Name" [(ngModel)]="imageName" />
+  <br />
+  <input type="text" placeholder="Category" [(ngModel)]="imageCategory" />
+  <br />
+  <button type="submit">Upload Image</button>
+</form>

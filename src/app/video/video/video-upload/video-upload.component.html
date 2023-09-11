@@ -1,0 +1,16 @@
+<p>video-upload works!</p>
+<form [formGroup]="videoForm" (submit)="uploadVideo()">
+  <!-- <input type="file" (change)="onFileSelected($event)" /> -->
+  <br />
+  <input type="text" placeholder="Name" [(ngModel)]="videoName" />
+  <br />
+  <input type="text" placeholder="Category" [(ngModel)]="videoCategory" />
+  <br />
+  <input
+    type="text"
+    placeholder="Enter YouTube video link"
+    [(ngModel)]="youtubeLink"
+  />
+  <button type="submit">Upload Video</button>
+  <pre>{{ videoForm.value | json }}</pre>
+</form>
